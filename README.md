@@ -12,5 +12,4 @@ run `docker-compose up --build` to rebuild and run the application
 
 ## Create super user
 
-run `docker-compose run app sh -c "python manage.py createsuperuser"`
-login -> http://127.0.0.1:8000/admin/
+run `docker-compose run app sh -c "python manage.py createsuperuser"` and login -> http://127.0.0.1:8000/admin/
