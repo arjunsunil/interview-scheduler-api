@@ -44,7 +44,7 @@ class ActiveSlotList(ListCreateAPIView):
         return Response(serialized_data)
 
     def get_formatted_json(self, user_id, is_interviewer=False, is_candidate=False):
-        """Get the formated json , like date : [slot1, slot2] """
+        """Get the formated json , like date : [slot1, slot2] for candidate and interviewer"""
         result = {}
         user_json_list = self.get_queryset().filter(
                 user_id=user_id,
@@ -61,7 +61,7 @@ class ActiveSlotList(ListCreateAPIView):
         return result
 
     def format_serialized_data(self, interviewer_json, candidate_json):
-        """Merge candidate json and interviwer json to get the expected output"""
+        """Intersection of candidate json and interviwer json to get the expected output"""
         response_json = OrderedDict()
         for key in interviewer_json.keys():
             slots = []
