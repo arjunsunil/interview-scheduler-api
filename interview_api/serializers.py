@@ -3,6 +3,7 @@ from rest_framework.exceptions import ParseError
 
 from interview_api.models import User, InterviewSlot
 
+
 class ChoiceField(serializers.ChoiceField):
 
     def to_representation(self, obj):

@@ -1,6 +1,7 @@
 from django.contrib.auth.models import BaseUserManager
 from rest_framework.exceptions import ParseError
 
+
 class UserManager(BaseUserManager):
     """Manager for user profiles"""
 
@@ -14,6 +15,17 @@ class UserManager(BaseUserManager):
             is_candidate=is_candidate,
             is_interviewer=is_interviewer
         )
+        user.set_password(password)
+        user.save()
+        return user
+
+    def create_superuser(self, username, password):
+        """create and saves a new super user"""
+        user = self.model(
+            username=username,
+        )
+        user.is_staff = True
+        user.is_superuser = True
         user.set_password(password)
         user.save()
         return user

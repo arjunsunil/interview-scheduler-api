@@ -10,10 +10,11 @@ swagger_view = get_swagger_view(title='Jiffy Swagger Help')
 
 router = DefaultRouter()
 router.register('user', views.UserViewSet)
-router.register('interview/slots', views.InterviewSlotViewSet)
+router.register('interview-slots', views.InterviewSlotViewSet)
 
 
 urlpatterns = [
     path('', include(router.urls)),
     path('swagger/', swagger_view),
+    path('active-slots/', views.ActiveSlotList.as_view()),
 ]
