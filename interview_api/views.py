@@ -34,9 +34,9 @@ class ActiveSlotList(ListCreateAPIView):
         interviewer_id = request.query_params.get('interviewer_id', None)
         candidate_id = request.query_params.get('candidate_id', None)
         if not interviewer_id:
-            raise ParseError('Please provide interviewer id as query parameter')
+            raise ParseError('Please provide interviewer_id as query parameter')
         if not candidate_id:
-            raise ParseError('Please provide candidate id as query parameter')
+            raise ParseError('Please provide candidate_id as query parameter')
 
         candidate_json = self.get_formatted_json(candidate_id, is_candidate=True)
         interviewer_json = self.get_formatted_json(interviewer_id, is_interviewer=True)

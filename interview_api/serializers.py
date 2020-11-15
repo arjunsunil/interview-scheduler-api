@@ -76,6 +76,6 @@ class InterviewSlotSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         """create and return a new user"""
         if not self.context['request'].user.is_authenticated:
-            raise ParseError('User must be authenticated')
+            raise ParseError('Authentication credentials were not provided')
         validated_data['user'] = self.context['request'].user
         return super().create(validated_data)
