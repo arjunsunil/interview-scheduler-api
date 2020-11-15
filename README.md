@@ -8,6 +8,7 @@ Scheduling interviews is a burden in most of the companies. When you want to sch
 ## To run the application
 
 make sure that docker and python are installed on your system and correctly configured to run this application.
+
 run `docker-compose up --build` to rebuild and run the application
 
 ### Create a superuser
