@@ -17,13 +17,14 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 class InterviewSlotViewSet(viewsets.ModelViewSet):
-    """Handle creating and updating user"""
+    """Handle creating and updating interview slots"""
     serializer_class = serializers.InterviewSlotSerializer
     queryset = InterviewSlot.objects.all()
     permission_classes = (permissions.UpdateOwnProfile,)
 
 
 class ActiveSlotList(ListCreateAPIView):
+    """To get the spefic interview slots by passing interviewer_id and candidate_id as query parameters"""
     queryset = InterviewSlot.objects.all()
     serializer_class = serializers.InterviewSlotSerializer
 
