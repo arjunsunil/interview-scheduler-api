@@ -1,6 +1,23 @@
 from rest_framework import serializers
+from rest_framework.exceptions import ParseError
 
-from interview_api.models import User
+from interview_api.models import User, InterviewSlot
+
+class ChoiceField(serializers.ChoiceField):
+
+    def to_representation(self, obj):
+        if obj == '' and self.allow_blank:
+            return obj
+        return self._choices[obj]
+
+    def to_internal_value(self, data):
+        if data == '' and self.allow_blank:
+            return ''
+
+        for key, val in self._choices.items():
+            if val == data:
+                return key
+        self.fail('invalid_choice', input=data)
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -46,3 +63,18 @@ class UserSerializer(serializers.ModelSerializer):
 
         return super().update(instance, validated_data)
 
+
+class InterviewSlotSerializer(serializers.ModelSerializer):
+    """Serializers for a InterviewSlot object """
+    slot = ChoiceField(choices=InterviewSlot.SLOT_CHOICES)
+
+    class Meta:
+        model = InterviewSlot
+        fields = ('id', 'date', 'slot')
+
+    def create(self, validated_data):
+        """create and return a new user"""
+        if not self.context['request'].user.is_authenticated:
+            raise ParseError('User must be authenticated')
+        validated_data['user'] = self.context['request'].user
+        return super().create(validated_data)
