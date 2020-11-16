@@ -31,4 +31,3 @@ log in to `http://127.0.0.1:8000/admin/`
 ##### swagger
 
 `http://127.0.0.1:8000/api/swagger/`
-
