@@ -17,12 +17,12 @@ run `docker-compose run app sh -c "python manage.py createsuperuser"`
 
 log in to `http://127.0.0.1:8000/admin/` 
 
-### API List
+## API List
 1. create/update/delete interviewer or candidate `http://127.0.0.1:8000/api/user`  
 2. create/update/delete interview slot `http://127.0.0.1:8000/api/interview-slots`
 3. List spefic interview slots `http://127.0.0.1:8000/api/active-slots?interviewer_id=1&candidate_id=2`
 
-#### create interview slots
+### Create interview slots
 
 ##### Avilable slot choices
 
