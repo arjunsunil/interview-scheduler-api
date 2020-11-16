@@ -15,11 +15,19 @@ run `docker-compose up --build` to rebuild and run the application
 
 run `docker-compose run app sh -c "python manage.py createsuperuser"` 
 
-log in to `http://127.0.0.1:8000/admin/`
+log in to `http://127.0.0.1:8000/admin/` 
 
-### API Documentation
+### API List
+1. create/update/delete interviewer or candidate `http://127.0.0.1:8000/api/user`  
+2. create/update/delete interview slot `http://127.0.0.1:8000/api/interview-slots`
+3. List spefic interview slots `http://127.0.0.1:8000/api/active-slots?interviewer_id=1&candidate_id=2`
 
-check this postman collection `https://github.com/arjunsunil/interview-scheduler-api/blob/main/interview-scheduler-api_postman_collection.json`
+## API Documentation
 
-check this `http://127.0.0.1:8000/api/swagger/` for more info
+##### postman collection    
 
+`https://github.com/arjunsunil/interview-scheduler-api/blob/main/interview-scheduler-api_postman_collection.json`
+
+##### swagger
+
+`http://127.0.0.1:8000/api/swagger/`
