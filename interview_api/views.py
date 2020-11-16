@@ -24,7 +24,7 @@ class InterviewSlotViewSet(viewsets.ModelViewSet):
 
 
 class ActiveSlotList(ListCreateAPIView):
-    """To get the spefic interview slots by passing interviewer_id and candidate_id as query parameters"""
+    """To get the specific interview slots by passing interviewer_id and candidate_id as query parameters"""
     queryset = InterviewSlot.objects.all()
     serializer_class = serializers.InterviewSlotSerializer
 
