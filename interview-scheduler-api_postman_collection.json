@@ -397,7 +397,7 @@
 			"response": []
 		},
 		{
-			"name": "List spefic interview slots",
+			"name": "List specific interview slots",
 			"request": {
 				"method": "GET",
 				"header": [],
