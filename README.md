@@ -22,11 +22,13 @@ log in to `http://127.0.0.1:8000/admin/`
 2. create/update/delete interview slot `http://127.0.0.1:8000/api/interview-slots`
 3. List spefic interview slots `http://127.0.0.1:8000/api/active-slots?interviewer_id=1&candidate_id=2`
 
-### API Documentation
+## API Documentation
 
-check this postman collection    
+##### postman collection    
 
 `https://github.com/arjunsunil/interview-scheduler-api/blob/main/interview-scheduler-api_postman_collection.json`
 
-check this `http://127.0.0.1:8000/api/swagger/` for more info
+##### swagger
+
+`http://127.0.0.1:8000/api/swagger/`
 
