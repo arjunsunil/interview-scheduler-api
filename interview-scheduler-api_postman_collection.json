@@ -16,17 +16,17 @@
 					"formdata": [
 						{
 							"key": "email",
-							"value": "interviewer2@gmail.com",
+							"value": "interviewer1@gmail.com",
 							"type": "text"
 						},
 						{
 							"key": "username",
-							"value": "interviewer2",
+							"value": "interviewer1",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "interviewer2",
+							"value": "interviewer1",
 							"type": "text"
 						},
 						{
@@ -71,27 +71,27 @@
 					"formdata": [
 						{
 							"key": "email",
-							"value": "interviewer1@gmail.com",
+							"value": "candidate1@gmail.com",
 							"type": "text"
 						},
 						{
 							"key": "username",
-							"value": "interviewer1",
+							"value": "candidate1",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "interviewer1",
+							"value": "candidate1",
 							"type": "text"
 						},
 						{
 							"key": "candidate",
-							"value": "false",
+							"value": "true",
 							"type": "text"
 						},
 						{
 							"key": "interviewer",
-							"value": "true",
+							"value": "false",
 							"type": "text"
 						}
 					]
@@ -198,12 +198,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "interviewer2",
+							"value": "interviewer1",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "interviewer2",
+							"value": "interviewer1",
 							"type": "string"
 						}
 					]
@@ -211,7 +211,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/user/4/",
+					"raw": "http://127.0.0.1:8000/api/user/1",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -223,8 +223,7 @@
 					"path": [
 						"api",
 						"user",
-						"4",
-						""
+						"1"
 					]
 				}
 			},
@@ -283,7 +282,7 @@
 						},
 						{
 							"key": "slot",
-							"value": "10AM-11AM",
+							"value": "11AM-12PM",
 							"type": "text"
 						}
 					]
