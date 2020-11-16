@@ -30,7 +30,23 @@ log in to `http://127.0.0.1:8000/admin/`
 
 ##### Date format 
 
-Year-Month-Date , ex: 2020-12-2
+Year-Month-Date, ex: 2020-12-2
+
+### To get the specific interview slots
+
+1.Pass `interviewer_id` and `candidate_id` as query parameters
+
+###### Expected output
+
+{
+    "2020-12-01": [
+        "11AM-12PM",
+        "1PM-2PM"
+    ],
+    "2020-12-02": [
+        "1PM-2PM"
+    ]
+}
 
 
 ## API Documentation
