@@ -17,10 +17,37 @@ run `docker-compose run app sh -c "python manage.py createsuperuser"`
 
 log in to `http://127.0.0.1:8000/admin/` 
 
-### API List
+## API List
 1. create/update/delete interviewer or candidate `http://127.0.0.1:8000/api/user`  
 2. create/update/delete interview slot `http://127.0.0.1:8000/api/interview-slots`
 3. List spefic interview slots `http://127.0.0.1:8000/api/active-slots?interviewer_id=1&candidate_id=2`
+
+### Create interview slots
+
+##### Avilable slot choices
+
+10AM-11AM, 11AM-12PM, 12PM-1PM, 1PM-2PM, 2PM-3PM, 3PM-4PM, 4PM-5PM, 5PM-6PM
+
+##### Date format 
+
+Year-Month-Date, ex: 2020-12-2
+
+### To get the specific interview slots
+
+1.Pass `interviewer_id` and `candidate_id` as query parameters
+
+###### Sample output
+
+{
+    "2020-12-01": [
+        "11AM-12PM",
+        "1PM-2PM"
+    ],
+    "2020-12-02": [
+        "1PM-2PM"
+    ]
+}
+
 
 ## API Documentation
 
