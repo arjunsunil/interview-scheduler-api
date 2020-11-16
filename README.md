@@ -36,7 +36,7 @@ Year-Month-Date, ex: 2020-12-2
 
 1.Pass `interviewer_id` and `candidate_id` as query parameters
 
-###### Expected output
+###### Sample output
 
 {
     "2020-12-01": [
